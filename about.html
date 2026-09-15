@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us – Zephyr Garden Notes</title>
+    <meta name="description" content="Learn about Zephyr Garden Notes, an independent gardening blog. Meet our writers and discover our philosophy of slow, soil-focused gardening.">
+    <link rel="canonical" href="https://www.zephyrgardennotes.com/about.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Zephyr Garden Notes – Independent Gardening Journal">
+    <meta property="og:description" content="Practical gardening guides, soil health, and slow gardening essays from an independent editorial blog.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.zephyrgardennotes.com/about.html">
+    <meta property="og:image" content="https://www.zephyrgardennotes.com/og-image.jpg">
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Zephyr Garden Notes",
+      "description": "Independent gardening blog with long-form growing guides, soil science, and seasonal advice.",
+      "url": "https://www.zephyrgardennotes.com/about.html",
+      "author": {
+        "@type": "Person",
+        "name": "Elara Wren"
+      }
+    }
+    </script>
+    <style>
+        /* RESET & BASE (same as homepage for consistency) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', Georgia, 'Times New Roman', serif;
+            background-color: #fcfaf7;
+            color: #1e2b1c;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 600;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            color: #1b2e1b;
+        }
+
+        h1 { font-size: 2.6rem; margin-bottom: 0.6rem; }
+        h2 { font-size: 1.9rem; margin: 2rem 0 1rem; border-bottom: 1px solid #d9d6cf; padding-bottom: 0.4rem; }
+        h3 { font-size: 1.4rem; margin: 1.5rem 0 0.5rem; }
+        h4 { font-size: 1.2rem; margin: 1.2rem 0 0.4rem; }
+        p { margin-bottom: 1.2rem; font-size: 1.08rem; }
+
+        a {
+            color: #2b5e2b;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        a:hover {
+            color: #0f3f0f;
+            text-decoration: underline;
+        }
+
+        /* HEADER (same as homepage) */
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e2dfd9;
+            padding: 1.2rem 0;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            line-height: 1;
+            filter: grayscale(30%);
+        }
+
+        .logo-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.02em;
+            color: #1b3a1b;
+        }
+
+        .logo-text span {
+            font-weight: 300;
+            color: #5d6b5d;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.8rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .main-nav a {
+            color: #2d3a2d;
+            text-decoration: none;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid transparent;
+        }
+
+        .main-nav a:hover {
+            border-bottom-color: #9cb89c;
+            text-decoration: none;
+        }
+
+        .search-area {
+            margin-left: auto;
+            padding-left: 2rem;
+        }
+
+        .search-area input {
+            padding: 0.5rem 0.8rem;
+            border: 1px solid #d0cdc6;
+            border-radius: 30px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            background: #fcfaf7;
+            width: 180px;
+            transition: width 0.2s;
+        }
+
+        .search-area input:focus {
+            outline: none;
+            border-color: #8aa88a;
+            width: 220px;
+        }
+
+        /* LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ABOUT PAGE SPECIFIC */
+        .about-hero {
+            text-align: center;
+            padding: 3rem 1.5rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            color: #4d5e4d;
+            font-style: italic;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 2rem 0 4rem;
+        }
+
+        .about-card {
+            background: #ffffff;
+            border: 1px solid #e6e3dc;
+            border-radius: 12px;
+            padding: 2rem 2rem;
+        }
+
+        .about-card h2 {
+            margin-top: 0;
+            border-bottom: 1px solid #e2dfd9;
+            padding-bottom: 0.6rem;
+        }
+
+        .team-member {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #e9f0e9;
+            flex-shrink: 0;
+        }
+
+        .team-member h3 {
+            margin: 0 0 0.2rem;
+            font-size: 1.3rem;
+        }
+
+        .team-member .role {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: #5f6b5f;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .team-member p {
+            font-size: 0.98rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .values-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .values-list li {
+            margin-bottom: 1.2rem;
+            padding-left: 1.8rem;
+            position: relative;
+        }
+
+        .values-list li::before {
+            content: "🌱";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.1rem;
+        }
+
+        .values-list strong {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: #1b3a1b;
+        }
+
+        /* Simple block for the "not" list */
+        .not-list {
+            list-style: none;
+        }
+
+        .not-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.8rem;
+            position: relative;
+        }
+
+        .not-list li::before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #b04a3a;
+            font-weight: 700;
+        }
+
+        /* FOOTER (same as homepage) */
+        .site-footer {
+            background: #1e2b1c;
+            color: #d0d9d0;
+            padding: 3rem 0 1.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .footer-grid h5 {
+            color: #ffffff;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+        }
+
+        .footer-grid li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-grid a {
+            color: #b8c6b8;
+            text-decoration: none;
+        }
+
+        .footer-grid a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2.5rem auto 0;
+            padding: 1.5rem 1.5rem 0;
+            border-top: 1px solid #2f402f;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8b9a8b;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .search-area {
+                margin-left: 0;
+                padding-left: 0;
+                width: 100%;
+            }
+            .search-area input {
+                width: 100%;
+            }
+            .main-nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .about-hero h1 {
+                font-size: 2.4rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .about-hero h1 { font-size: 2.1rem; }
+            .about-card { padding: 1.5rem; }
+            .team-member {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- SITE HEADER (same as homepage) -->
+<header class="site-header">
+    <div class="header-inner">
+        <div class="logo">
+            <div class="logo-icon">🌿</div>
+            <div class="logo-text">Zephyr <span>Garden Notes</span></div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terms.html">Terms Of Privacy</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="cookies.html">Cookies Policy</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+                <li><a href="categories.html">Categories</a></li>
+            </ul>
+        </nav>
+        <div class="search-area">
+            <input type="text" id="searchInput" placeholder="Search articles...">
+        </div>
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <!-- HERO -->
+    <div class="about-hero">
+        <h1>We dig deeper.</h1>
+        <p>Zephyr Garden Notes is an independent gardening journal for people who want to understand the <em>why</em> behind the <em>how</em>.</p>
+    </div>
+
+    <!-- TWO COLUMN LAYOUT: OUR STORY + OUR VALUES -->
+    <div class="about-grid">
+        <!-- LEFT COLUMN: STORY + TEAM -->
+        <div>
+            <div class="about-card" style="margin-bottom:2rem;">
+                <h2>Our Story</h2>
+                <p>Zephyr Garden Notes began in 2021 as a simple email newsletter between two friends — Elara, a soil scientist, and Marcus, a lifelong vegetable grower. They were tired of gardening advice that felt either too shallow or too academic. They wanted something in between: practical, research-backed, and honest about the fact that gardening is messy, seasonal, and sometimes heartbreaking.</p>
+                <p>Today, Zephyr is read by thousands of gardeners around the world. We remain independent — no sponsored content, no affiliate-driven recommendations, no fluff. Just real dirt, real experiments, and a deep respect for the living soil beneath our feet.</p>
+                <p>We believe that the best gardens are built slowly, with observation and patience. And we believe that sharing what we learn — including our failures — makes us all better growers.</p>
+            </div>
+
+            <div class="about-card">
+                <h2>Meet the Writers</h2>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Elara Wren, Editor and Soil Nerd">
+                    <div>
+                        <h3>Elara Wren</h3>
+                        <div class="role">Editor & Soil Nerd</div>
+                        <p>Elara has a background in soil ecology and a deep obsession with compost. She writes our soil guides, seasonal essays, and anything that involves a microscope. Her garden is a chaotic laboratory of cover crops and native perennials.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Marcus Hale, Growing Guides">
+                    <div>
+                        <h3>Marcus Hale</h3>
+                        <div class="role">Growing Guides</div>
+                        <p>Marcus has been growing vegetables for over two decades. He specializes in tomatoes, peppers, and anything you can eat straight off the vine. He writes our practical growing guides and is a firm believer in the "less is more" approach to pruning.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80" alt="Priya Nair, Container & Small Space">
+                    <div>
+                        <h3>Priya Nair</h3>
+                        <div class="role">Container & Small Space</div>
+                        <p>Priya gardens on a windy balcony in the city. She writes about container growing, vertical gardens, and making the most of tiny spaces. Her specialty is dwarf varieties and herbs that thrive in pots.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: VALUES + WHAT WE'RE NOT -->
+        <div>
+            <div class="about-card" style="margin-bottom:2rem;">
+                <h2>What We Stand For</h2>
+                <ul class="values-list">
+                    <li>
+                        <strong>Soil first.</strong>
+                        Healthy soil grows healthy plants. We prioritize compost, mulch, and no-till methods over quick fixes.
+                    </li>
+                    <li>
+                        <strong>Observation over intervention.</strong>
+                        The best gardeners spend more time looking than doing. We encourage slow, thoughtful gardening.
+                    </li>
+                    <li>
+                        <strong>Honesty about failure.</strong>
+                        Not every experiment works. We share our mistakes so you can avoid them — or at least laugh along.
+                    </li>
+                    <li>
+                        <strong>Independence.</strong>
+                        No sponsored posts, no hidden ads. Our only loyalty is to our readers and the soil.
+                    </li>
+                    <li>
+                        <strong>Accessible science.</strong>
+                        We read the research so you don't have to. Every guide is grounded in real horticultural science, explained in plain language.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="about-card">
+                <h2>What We're Not</h2>
+                <ul class="not-list">
+                    <li>A glossy lifestyle magazine. We don't care about perfect photoshoots.</li>
+                    <li>A source of quick-fix hacks. Gardening takes time.</li>
+                    <li>Affiliated with any chemical or garden product company.</li>
+                    <li>Afraid to say "I don't know." When we're unsure, we say so.</li>
+                    <li>For people who want a perfectly manicured lawn. We're wilder than that.</li>
+                </ul>
+                <p style="margin-top:1.5rem; font-size:0.95rem;">If that sounds like your kind of garden, you're in the right place. <a href="index.html">Start reading →</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEWSLETTER (same as homepage) -->
+    <section class="newsletter-section" style="background:#edf3ed; border-radius:12px; padding:2.5rem; text-align:center; margin:3rem 0;">
+        <h2 style="border-bottom:none; margin-top:0;">Get weekly garden notes</h2>
+        <p style="max-width:500px; margin:0.5rem auto 1.5rem;">One thoughtful email each Friday: what to plant, what to prune, and what to leave alone. No spam, ever.</p>
+        <form id="newsletterForm">
+            <input type="email" placeholder="Your email address" required style="padding:0.8rem 1.2rem; border:1px solid #c0d0c0; border-radius:40px; font-family:'Inter',sans-serif; width:260px; max-width:80%; margin-right:0.5rem; background:#fff;">
+            <button type="submit" style="background:#1b3a1b; color:white; border:none; padding:0.8rem 1.8rem; border-radius:40px; font-family:'Inter',sans-serif; font-weight:500; cursor:pointer;">Subscribe</button>
+        </form>
+        <p style="font-size:0.8rem; margin-top:1rem; color:#4d5e4d;">We respect your privacy. Unsubscribe anytime.</p>
+    </section>
+</div>
+
+<!-- FOOTER (same as homepage) -->
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div>
+            <h5>Zephyr Garden Notes</h5>
+            <p style="color:#b8c6b8; font-size:0.85rem;">Independent gardening blog since 2021. Real dirt, real advice.</p>
+        </div>
+        <div>
+            <h5>Explore</h5>
+            <ul>
+                <li><a href="#">Growing Guides</a></li>
+                <li><a href="#">Soil & Compost</a></li>
+                <li><a href="#">Seasonal</a></li>
+                <li><a href="#">Essays</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5>Information</h5>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Use</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5>Connect</h5>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Pinterest</a></li>
+                <li><a href="#">RSS Feed</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 Zephyr Garden Notes. All rights reserved. Made with soil under fingernails.
+    </div>
+</footer>
+
+<script>
+    // Newsletter form handler (same as homepage)
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing to Zephyr Garden Notes. Check your inbox for a confirmation email.');
+            newsletterForm.reset();
+        });
+    }
+
+    // Simple search placeholder handler (no real search on about page, just for consistency)
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                alert('Search is available on the homepage. Redirecting you there...');
+                window.location.href = 'index.html';
+            }
+        });
+    }
+</script>
+</body>
+</html>

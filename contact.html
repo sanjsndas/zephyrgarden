@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Zephyr Garden Notes – Get in Touch With the Editors</title>
+    <meta name="description" content="Have a gardening question, story idea, or feedback? Contact the Zephyr Garden Notes editorial team. We read every message.">
+    <link rel="canonical" href="https://www.zephyrgardennotes.com/contact.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Zephyr Garden Notes – Get in Touch">
+    <meta property="og:description" content="Have a gardening question, story idea, or feedback? Contact the Zephyr Garden Notes editorial team.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.zephyrgardennotes.com/contact.html">
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Zephyr Garden Notes",
+      "description": "Contact page for independent gardening blog Zephyr Garden Notes.",
+      "url": "https://www.zephyrgardennotes.com/contact.html"
+    }
+    </script>
+    <style>
+        /* RESET & BASE (same as main site) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', Georgia, 'Times New Roman', serif;
+            background-color: #fcfaf7;
+            color: #1e2b1c;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 600;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            color: #1b2e1b;
+        }
+
+        h1 { font-size: 2.6rem; margin-bottom: 0.6rem; }
+        h2 { font-size: 1.9rem; margin: 2rem 0 1rem; border-bottom: 1px solid #d9d6cf; padding-bottom: 0.4rem; }
+        h3 { font-size: 1.4rem; margin: 1.5rem 0 0.5rem; }
+        p { margin-bottom: 1.2rem; font-size: 1.08rem; }
+
+        a {
+            color: #2b5e2b;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        a:hover {
+            color: #0f3f0f;
+            text-decoration: underline;
+        }
+
+        /* HEADER (same) */
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e2dfd9;
+            padding: 1.2rem 0;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            line-height: 1;
+            filter: grayscale(30%);
+        }
+
+        .logo-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.02em;
+            color: #1b3a1b;
+        }
+
+        .logo-text span {
+            font-weight: 300;
+            color: #5d6b5d;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.8rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            flex-wrap: wrap;
+        }
+
+        .main-nav a {
+            color: #2d3a2d;
+            text-decoration: none;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid transparent;
+        }
+
+        .main-nav a:hover {
+            border-bottom-color: #9cb89c;
+            text-decoration: none;
+        }
+
+        .main-nav a.active {
+            border-bottom-color: #2b5e2b;
+            color: #1b3a1b;
+        }
+
+        .search-area {
+            margin-left: auto;
+            padding-left: 2rem;
+        }
+
+        .search-area input {
+            padding: 0.5rem 0.8rem;
+            border: 1px solid #d0cdc6;
+            border-radius: 30px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            background: #fcfaf7;
+            width: 180px;
+            transition: width 0.2s;
+        }
+
+        .search-area input:focus {
+            outline: none;
+            border-color: #8aa88a;
+            width: 220px;
+        }
+
+        /* LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            padding: 2.5rem 0 3rem;
+        }
+
+        /* CONTACT FORM */
+        .contact-form-card {
+            background: #ffffff;
+            border: 1px solid #e6e3dc;
+            border-radius: 12px;
+            padding: 2rem 2.2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .contact-form-card h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-form-card .subhead {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #5f6b5f;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e2dfd9;
+            padding-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+            color: #1e3a1e;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #d0cdc6;
+            border-radius: 8px;
+            font-family: 'Lora', Georgia, serif;
+            font-size: 1rem;
+            background: #fcfaf7;
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #8aa88a;
+            box-shadow: 0 0 0 3px rgba(138, 168, 138, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235f6b5f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .btn-submit {
+            background: #1b3a1b;
+            color: white;
+            border: none;
+            padding: 0.9rem 2.5rem;
+            border-radius: 40px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.15s;
+            margin-top: 0.5rem;
+        }
+
+        .btn-submit:hover {
+            background: #2b5e2b;
+        }
+
+        .form-note {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: #7a877a;
+            margin-top: 1.2rem;
+        }
+
+        /* SIDEBAR / CONTACT INFO */
+        .contact-sidebar {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .contact-widget {
+            background: #ffffff;
+            border: 1px solid #e6e3dc;
+            border-radius: 12px;
+            padding: 1.8rem 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-widget h3 {
+            font-size: 1.1rem;
+            margin: 0 0 1rem;
+            border-bottom: 1px solid #e2dfd9;
+            padding-bottom: 0.5rem;
+        }
+
+        .contact-widget p {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            align-items: flex-start;
+        }
+
+        .contact-detail .icon {
+            font-size: 1.2rem;
+            line-height: 1.4;
+            filter: grayscale(30%);
+        }
+
+        .contact-detail .text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .contact-detail .text strong {
+            display: block;
+            font-weight: 600;
+            color: #1b3a1b;
+            margin-bottom: 0.1rem;
+        }
+
+        .response-badge {
+            display: inline-block;
+            background: #e9f0e9;
+            color: #2d5e2d;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            margin-top: 0.5rem;
+        }
+
+        /* FAQ MINI */
+        .faq-mini {
+            margin-top: 2.5rem;
+        }
+
+        .faq-mini-item {
+            background: #ffffff;
+            border: 1px solid #e6e3dc;
+            border-radius: 8px;
+            padding: 1rem 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-mini-item h4 {
+            font-size: 1rem;
+            margin: 0 0 0.3rem;
+        }
+
+        .faq-mini-item p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: #354235;
+        }
+
+        /* NEWSLETTER (same) */
+        .newsletter-section {
+            background: #edf3ed;
+            border-radius: 12px;
+            padding: 2.5rem 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .newsletter-section h2 {
+            border-bottom: none;
+            margin-top: 0;
+        }
+
+        .newsletter-section input {
+            padding: 0.8rem 1.2rem;
+            border: 1px solid #c0d0c0;
+            border-radius: 40px;
+            font-family: 'Inter', sans-serif;
+            width: 260px;
+            max-width: 80%;
+            margin-right: 0.5rem;
+            background: #ffffff;
+        }
+
+        .newsletter-section button {
+            background: #1b3a1b;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 40px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .newsletter-section button:hover {
+            background: #2b5e2b;
+        }
+
+        /* FOOTER (same) */
+        .site-footer {
+            background: #1e2b1c;
+            color: #d0d9d0;
+            padding: 3rem 0 1.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .footer-grid h5 {
+            color: #ffffff;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+        }
+
+        .footer-grid li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-grid a {
+            color: #b8c6b8;
+            text-decoration: none;
+        }
+
+        .footer-grid a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2.5rem auto 0;
+            padding: 1.5rem 1.5rem 0;
+            border-top: 1px solid #2f402f;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8b9a8b;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .search-area {
+                margin-left: 0;
+                padding-left: 0;
+                width: 100%;
+            }
+            .search-area input {
+                width: 100%;
+            }
+            .main-nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .contact-form-card { padding: 1.5rem; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .newsletter-section input { width: 100%; margin-bottom: 0.8rem; }
+            .contact-widget { padding: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- SITE HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <div class="logo">
+            <div class="logo-icon">🌿</div>
+            <div class="logo-text">Zephyr <span>Garden Notes</span></div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="terms.html">Terms Of Privacy</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="cookies.html">Cookies Policy</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+                <li><a href="categories.html">Categories</a></li>
+            </ul>
+        </nav>
+        <div class="search-area">
+            <input type="text" id="searchInput" placeholder="Search articles...">
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <!-- CONTACT LAYOUT -->
+    <div class="contact-layout">
+        <!-- LEFT: CONTACT FORM -->
+        <main>
+            <div class="contact-form-card">
+                <h1>Get in touch</h1>
+                <p class="subhead">We read every message. Whether you have a gardening question, a correction, or just want to say hello — we're listening.</p>
+
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your name</label>
+                            <input type="text" id="name" name="name" placeholder="e.g. Sam Rivera" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General question</option>
+                            <option value="growing">Growing advice</option>
+                            <option value="soil">Soil & compost</option>
+                            <option value="correction">Correction or update</option>
+                            <option value="guest">Guest post / collaboration</option>
+                            <option value="feedback">Feedback on an article</option>
+                            <option value="other">Something else</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your message</label>
+                        <textarea id="message" name="message" placeholder="Tell us what's on your mind. The more detail, the better we can help." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send message</button>
+                    <p class="form-note">We typically reply within 2–3 working days. No newsletters, no spam — just a real reply from a real person.</p>
+                </form>
+            </div>
+        </main>
+
+        <!-- RIGHT: CONTACT INFO SIDEBAR -->
+        <aside class="contact-sidebar">
+            <div class="contact-widget">
+                <h3>Direct contact</h3>
+                <div class="contact-detail">
+                    <div class="icon">✉️</div>
+                    <div class="text">
+                        <strong>Email</strong>
+                        hello@zephyrgardennotes.com
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">📬</div>
+                    <div class="text">
+                        <strong>Editorial</strong>
+                        Elara Wren — elara@zephyrgardennotes.com<br>
+                        Marcus Hale — marcus@zephyrgardennotes.com
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">📝</div>
+                    <div class="text">
+                        <strong>Guest posts</strong>
+                        We welcome pitches from experienced gardeners. Send a short outline.
+                    </div>
+                </div>
+                <div class="response-badge">Usually replies in 2–3 days</div>
+            </div>
+
+            <div class="contact-widget">
+                <h3>Before you write</h3>
+                <p style="font-size:0.95rem;">We're a small independent team. We love hearing from readers, but we can't diagnose every plant problem by email. For urgent garden issues, a local extension service or master gardener hotline is often faster.</p>
+                <p style="font-size:0.95rem; margin-bottom:0;">If your question is about a specific article, please mention the title so we can route it correctly.</p>
+            </div>
+
+            <div class="contact-widget">
+                <h3>Follow along</h3>
+                <p style="font-size:0.95rem;">We share daily notes, photos, and small observations on social media.</p>
+                <ul style="list-style:none; font-size:0.95rem;">
+                    <li style="margin-bottom:0.5rem;">🌱 <a href="#">Instagram — @zephyrgardennotes</a></li>
+                    <li style="margin-bottom:0.5rem;">📌 <a href="#">Pinterest — Zephyr Garden Notes</a></li>
+                    <li>📡 <a href="#">RSS Feed</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- MINI FAQ / HELPFUL NOTES -->
+    <section class="faq-mini">
+        <h2 style="border-bottom: none; margin-bottom: 1.5rem;">Quick answers before you write</h2>
+        <div class="faq-mini-item">
+            <h4>Can you identify a plant or disease for me?</h4>
+            <p>We'll try if you include clear photos and your growing zone, but we're not a diagnostic lab. For fast, accurate ID, try a local extension office or a plant identification app.</p>
+        </div>
+        <div class="faq-mini-item">
+            <h4>Do you accept sponsored posts or advertising?</h4>
+            <p>No. Zephyr Garden Notes is fully independent and ad-free. We don't publish sponsored content or accept payment for coverage.</p>
+        </div>
+        <div class="faq-mini-item">
+            <h4>I found a typo or factual error. What should I do?</h4>
+            <p>Please tell us! Use the form above and choose "Correction or update." We appreciate accuracy and will fix errors promptly.</p>
+        </div>
+        <div class="faq-mini-item">
+            <h4>Can I republish your articles?</h4>
+            <p>We're flattered, but we ask that you don't republish full articles without permission. Short quotes with a link back are always welcome.</p>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER (same as main) -->
+    <section class="newsletter-section">
+        <h2>Get weekly garden notes</h2>
+        <p style="max-width:500px; margin:0.5rem auto 1.5rem;">One thoughtful email each Friday: what to plant, what to prune, and what to leave alone. No spam, ever.</p>
+        <form id="newsletterForm">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <p style="font-size:0.8rem; margin-top:1rem; color:#4d5e4d;">We respect your privacy. Unsubscribe anytime.</p>
+    </section>
+</div>
+
+<!-- FOOTER (same) -->
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div>
+            <h5>Zephyr Garden Notes</h5>
+            <p style="color:#b8c6b8; font-size:0.85rem;">Independent gardening blog since 2021. Real dirt, real advice.</p>
+        </div>
+        <div>
+            <h5>Explore</h5>
+            <ul>
+                <li><a href="#">Growing Guides</a></li>
+                <li><a href="#">Soil & Compost</a></li>
+                <li><a href="#">Seasonal</a></li>
+                <li><a href="#">Essays</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5>Information</h5>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Use</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5>Connect</h5>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Pinterest</a></li>
+                <li><a href="#">RSS Feed</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 Zephyr Garden Notes. All rights reserved. Made with soil under fingernails.
+    </div>
+</footer>
+
+<script>
+    // Contact form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields (name, email, and message).');
+                return;
+            }
+
+            // Simulate successful submission
+            alert(`Thank you, ${name}. Your message has been sent to the Zephyr Garden Notes editors. We'll reply to ${email} within 2–3 working days.`);
+            contactForm.reset();
+        });
+    }
+
+    // Newsletter form (same as main)
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing to Zephyr Garden Notes. Check your inbox for a confirmation email.');
+            newsletterForm.reset();
+        });
+    }
+
+    // Simple search placeholder functionality (redirects or filters - not fully implemented on this page)
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                alert('Search is available on the home page. Redirecting you there with your query...');
+                // In a real site, you'd redirect: window.location.href = 'index.html?q=' + encodeURIComponent(this.value);
+            }
+        });
+    }
+</script>
+</body>
+</html>

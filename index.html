@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zephyr Garden Notes – Independent Gardening Journal & Growing Guides</title>
+    <meta name="description" content="Zephyr Garden Notes is an independent blog for gardeners: practical growing guides, soil wisdom, seasonal planting, and slow gardening essays. No fluff, just real dirt.">
+    <link rel="canonical" href="https://www.zephyrgardennotes.com/">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Zephyr Garden Notes – Independent Gardening Journal">
+    <meta property="og:description" content="Practical gardening guides, soil health, seasonal planting, and slow gardening essays from an independent editorial blog.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.zephyrgardennotes.com/">
+    <meta property="og:image" content="https://www.zephyrgardennotes.com/og-image.jpg">
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Zephyr Garden Notes",
+      "description": "Independent gardening blog with long-form growing guides, soil science, and seasonal advice.",
+      "url": "https://www.zephyrgardennotes.com/",
+      "author": {
+        "@type": "Person",
+        "name": "Elara Wren"
+      }
+    }
+    </script>
+    <style>
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', Georgia, 'Times New Roman', serif;
+            background-color: #fcfaf7;
+            color: #1e2b1c;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 600;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            color: #1b2e1b;
+        }
+
+        h1 { font-size: 2.6rem; margin-bottom: 0.6rem; }
+        h2 { font-size: 1.9rem; margin: 2rem 0 1rem; border-bottom: 1px solid #d9d6cf; padding-bottom: 0.4rem; }
+        h3 { font-size: 1.4rem; margin: 1.5rem 0 0.5rem; }
+        h4 { font-size: 1.2rem; margin: 1.2rem 0 0.4rem; }
+        p { margin-bottom: 1.2rem; font-size: 1.08rem; }
+
+        a {
+            color: #2b5e2b;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        a:hover {
+            color: #0f3f0f;
+            text-decoration: underline;
+        }
+
+        /* HEADER */
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e2dfd9;
+            padding: 1.2rem 0;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            line-height: 1;
+            filter: grayscale(30%);
+        }
+
+        .logo-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.02em;
+            color: #1b3a1b;
+        }
+
+        .logo-text span {
+            font-weight: 300;
+            color: #5d6b5d;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.8rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .main-nav a {
+            color: #2d3a2d;
+            text-decoration: none;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid transparent;
+        }
+
+        .main-nav a:hover {
+            border-bottom-color: #9cb89c;
+            text-decoration: none;
+        }
+
+        /* SEARCH BAR */
+        .search-area {
+            margin-left: auto;
+            padding-left: 2rem;
+        }
+
+        .search-area input {
+            padding: 0.5rem 0.8rem;
+            border: 1px solid #d0cdc6;
+            border-radius: 30px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            background: #fcfaf7;
+            width: 180px;
+            transition: width 0.2s;
+        }
+
+        .search-area input:focus {
+            outline: none;
+            border-color: #8aa88a;
+            width: 220px;
+        }
+
+        /* LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2.2fr 1fr;
+            gap: 3rem;
+            padding: 2.5rem 0 3rem;
+        }
+
+        /* ARTICLES */
+        .featured-article {
+            background: #ffffff;
+            border: 1px solid #e6e3dc;
+            border-radius: 8px;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .featured-article h2 {
+            border-bottom: none;
+            margin-top: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .featured-article .meta {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: #5f6b5f;
+            margin: 0.5rem 0 1rem;
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        .article-card {
+            background: #ffffff;
+            border: 1px solid #e6e3dc;
+            border-radius: 8px;
+            padding: 1.6rem 1.8rem;
+            margin-bottom: 1.8rem;
+            transition: box-shadow 0.15s;
+        }
+
+        .article-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .article-card h3 {
+            margin: 0.3rem 0 0.4rem;
+            font-size: 1.5rem;
+        }
+
+        .article-card h3 a {
+            color: #1b3a1b;
+        }
+
+        .article-card h3 a:hover {
+            color: #2b5e2b;
+            text-decoration: none;
+        }
+
+        .article-meta {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: #687568;
+            display: flex;
+            gap: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .article-category {
+            background: #e9f0e9;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            font-weight: 500;
+            color: #2d5e2d;
+        }
+
+        .excerpt {
+            color: #354235;
+            font-size: 1rem;
+            margin: 0.5rem 0 0;
+        }
+
+        .reading-time {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: #7a877a;
+            white-space: nowrap;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .sidebar-widget {
+            background: #ffffff;
+            border: 1px solid #e6e3dc;
+            border-radius: 8px;
+            padding: 1.5rem 1.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.1rem;
+            margin: 0 0 1rem;
+            border-bottom: 1px solid #e2dfd9;
+            padding-bottom: 0.5rem;
+        }
+
+        .sidebar-widget ul {
+            list-style: none;
+        }
+
+        .sidebar-widget li {
+            margin-bottom: 0.9rem;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .sidebar-widget li a {
+            color: #1e3a1e;
+        }
+
+        .popular-item {
+            display: flex;
+            gap: 0.7rem;
+            margin-bottom: 1rem;
+        }
+
+        .popular-num {
+            font-weight: 700;
+            color: #a5b8a5;
+            font-size: 1.2rem;
+            min-width: 1.5rem;
+        }
+
+        /* NEWSLETTER */
+        .newsletter-section {
+            background: #edf3ed;
+            border-radius: 12px;
+            padding: 2.5rem 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .newsletter-section h2 {
+            border-bottom: none;
+            margin-top: 0;
+        }
+
+        .newsletter-section input {
+            padding: 0.8rem 1.2rem;
+            border: 1px solid #c0d0c0;
+            border-radius: 40px;
+            font-family: 'Inter', sans-serif;
+            width: 260px;
+            max-width: 80%;
+            margin-right: 0.5rem;
+            background: #ffffff;
+        }
+
+        .newsletter-section button {
+            background: #1b3a1b;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 40px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .newsletter-section button:hover {
+            background: #2b5e2b;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e6e3dc;
+            border-radius: 8px;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item h4 {
+            margin: 0 0 0.3rem;
+            font-size: 1.1rem;
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: #1e2b1c;
+            color: #d0d9d0;
+            padding: 3rem 0 1.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .footer-grid h5 {
+            color: #ffffff;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+        }
+
+        .footer-grid li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-grid a {
+            color: #b8c6b8;
+            text-decoration: none;
+        }
+
+        .footer-grid a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2.5rem auto 0;
+            padding: 1.5rem 1.5rem 0;
+            border-top: 1px solid #2f402f;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8b9a8b;
+        }
+
+        /* MODAL FOR ARTICLE */
+        .article-modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 2rem 1rem;
+            backdrop-filter: blur(2px);
+        }
+
+        .modal-content {
+            max-width: 720px;
+            margin: 2rem auto;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 2.5rem 2.8rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #5a6b5a;
+        }
+
+        .modal-content h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-content .meta {
+            color: #5f6b5f;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        /* IMAGES */
+        .article-image {
+            width: 100%;
+            max-height: 320px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 1.2rem 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .search-area {
+                margin-left: 0;
+                padding-left: 0;
+                width: 100%;
+            }
+            .search-area input {
+                width: 100%;
+            }
+            .main-nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .featured-article { padding: 1.2rem; }
+            .article-card { padding: 1.2rem; }
+            .modal-content { padding: 1.8rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .newsletter-section input { width: 100%; margin-bottom: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- SITE HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <div class="logo">
+            <div class="logo-icon">🌿</div>
+            <div class="logo-text">Zephyr <span>Garden Notes</span></div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                 <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+            </ul>
+        </nav>
+        <div class="search-area">
+            <input type="text" id="searchInput" placeholder="Search articles...">
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <!-- MAIN GRID -->
+    <div class="main-grid">
+        <!-- LEFT COLUMN: ARTICLES -->
+        <main id="articleContainer">
+            <!-- FEATURED ARTICLE -->
+            <article class="featured-article" data-category="soil">
+                <div class="article-meta">
+                    <span class="article-category">Soil</span>
+                    <span class="reading-time">12 min read</span>
+                </div>
+                <h2><a href="#" class="article-link" data-article="soil-food-web">The Living Soil: Understanding the Food Web Beneath Your Feet</a></h2>
+                <p class="excerpt">Healthy soil isn't just dirt — it's a bustling metropolis of bacteria, fungi, nematodes, and earthworms. In this deep dive, we explore how to feed the soil, not just the plant, and why that distinction changes everything in your garden.</p>
+                <div class="meta">By Elara Wren · March 12, 2025</div>
+                <img class="article-image" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80" alt="Hands holding rich dark soil with visible roots and organic matter">
+            </article>
+
+            <!-- ARTICLE CARDS -->
+            <article class="article-card" data-category="growing">
+                <div class="article-meta">
+                    <span class="article-category">Growing</span>
+                    <span class="reading-time">8 min read</span>
+                </div>
+                <h3><a href="#" class="article-link" data-article="tomato-guide">Tomatoes Without Tears: A Realistic Guide for Home Gardeners</a></h3>
+                <p class="excerpt">Forget the myths. This practical guide covers indeterminate vs. determinate, pruning myths, blossom end rot, and the one thing most gardeners forget: consistent watering.</p>
+                <div class="meta">By Marcus Hale · March 10, 2025</div>
+            </article>
+
+            <article class="article-card" data-category="seasonal">
+                <div class="article-meta">
+                    <span class="article-category">Seasonal</span>
+                    <span class="reading-time">6 min read</span>
+                </div>
+                <h3><a href="#" class="article-link" data-article="autumn-planting">Autumn Is for Planting: Why Fall Beats Spring for Perennials</a></h3>
+                <p class="excerpt">Cool soil, reliable rain, and less heat stress make autumn the secret season for establishing perennials, shrubs, and even trees. Here's what to plant now.</p>
+                <div class="meta">By Elara Wren · March 8, 2025</div>
+            </article>
+
+            <article class="article-card" data-category="essays">
+                <div class="article-meta">
+                    <span class="article-category">Essays</span>
+                    <span class="reading-time">5 min read</span>
+                </div>
+                <h3><a href="#" class="article-link" data-article="slow-gardening">The Case for Slow Gardening: Doing Less, Observing More</a></h3>
+                <p class="excerpt">In a world of instant results, the garden teaches patience. A meditation on why the best gardeners are often the ones who sit still the longest.</p>
+                <div class="meta">By Marcus Hale · March 5, 2025</div>
+            </article>
+
+            <article class="article-card" data-category="soil">
+                <div class="article-meta">
+                    <span class="article-category">Soil</span>
+                    <span class="reading-time">10 min read</span>
+                </div>
+                <h3><a href="#" class="article-link" data-article="composting-guide">Composting That Actually Works: A No-Nonsense Method</a></h3>
+                <p class="excerpt">Tired of slimy bins and mysterious odors? This guide breaks down the carbon-nitrogen ratio, turning, and troubleshooting so you can make black gold at home.</p>
+                <div class="meta">By Elara Wren · March 1, 2025</div>
+            </article>
+
+            <article class="article-card" data-category="growing">
+                <div class="article-meta">
+                    <span class="article-category">Growing</span>
+                    <span class="reading-time">9 min read</span>
+                </div>
+                <h3><a href="#" class="article-link" data-article="container-gardening">Container Gardening: Big Harvests from Small Spaces</a></h3>
+                <p class="excerpt">Balconies, patios, and windowsills can produce more than you think. Learn about pot size, soil mixes, and the best varieties for containers.</p>
+                <div class="meta">By Priya Nair · February 27, 2025</div>
+            </article>
+        </main>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3>About Zephyr</h3>
+                <p style="font-size:0.95rem; color:#354235;">Zephyr Garden Notes is an independent blog for gardeners who want to dig deeper. No ads, no fluff — just honest, researched gardening wisdom.</p>
+                <p style="font-size:0.9rem; margin-top:0.8rem;"><strong>Elara Wren</strong> — Editor & Soil Nerd<br><strong>Marcus Hale</strong> — Growing Guides</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Popular This Month</h3>
+                <div class="popular-item">
+                    <span class="popular-num">01</span>
+                    <a href="#" class="article-link" data-article="soil-food-web">The Living Soil: Understanding the Food Web</a>
+                </div>
+                <div class="popular-item">
+                    <span class="popular-num">02</span>
+                    <a href="#" class="article-link" data-article="tomato-guide">Tomatoes Without Tears</a>
+                </div>
+                <div class="popular-item">
+                    <span class="popular-num">03</span>
+                    <a href="#" class="article-link" data-article="composting-guide">Composting That Actually Works</a>
+                </div>
+                <div class="popular-item">
+                    <span class="popular-num">04</span>
+                    <a href="#" class="article-link" data-article="autumn-planting">Autumn Is for Planting</a>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#" data-category="growing">Growing Guides (18)</a></li>
+                    <li><a href="#" data-category="soil">Soil & Compost (12)</a></li>
+                    <li><a href="#" data-category="seasonal">Seasonal Tasks (9)</a></li>
+                    <li><a href="#" data-category="essays">Garden Essays (7)</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+        <h2>Get weekly garden notes</h2>
+        <p style="max-width:500px; margin:0.5rem auto 1.5rem;">One thoughtful email each Friday: what to plant, what to prune, and what to leave alone. No spam, ever.</p>
+        <form id="newsletterForm">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <p style="font-size:0.8rem; margin-top:1rem; color:#4d5e4d;">We respect your privacy. Unsubscribe anytime.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section style="margin: 3rem 0;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h4>Do I really need to test my soil?</h4>
+            <p>A basic pH test and a look at texture can save you years of frustration. Most garden centers offer affordable tests, or you can send a sample to a lab.</p>
+        </div>
+        <div class="faq-item">
+            <h4>What's the best time to water?</h4>
+            <p>Early morning is ideal — it reduces evaporation and lets foliage dry before evening, which helps prevent fungal diseases.</p>
+        </div>
+        <div class="faq-item">
+            <h4>How do I deal with slugs without chemicals?</h4>
+            <p>Beer traps, copper tape, diatomaceous earth, and evening hand-picking are all effective. Encourage birds and hedgehogs too.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Is raised bed gardening better than in-ground?</h4>
+            <p>It depends. Raised beds offer better drainage and control, but in-ground gardening builds long-term soil health and requires less watering once established.</p>
+        </div>
+    </section>
+
+    <!-- ABOUT / CONTACT / PRIVACY / TERMS / COOKIE (brief blocks) -->
+    <section style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:2rem; margin:2rem 0 3rem;">
+        <div>
+            <h3>About</h3>
+            <p style="font-size:0.9rem;">Zephyr Garden Notes is an independent publication created by gardeners, for gardeners. We believe in observation, patience, and healthy soil.</p>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <p style="font-size:0.9rem;">hello@zephyrgardennotes.com<br>We read every email but may take a few days to reply.</p>
+        </div>
+        <div>
+            <h3>Privacy</h3>
+            <p style="font-size:0.9rem;">We don't sell or share your data. Newsletter emails are handled by a GDPR-compliant provider.</p>
+        </div>
+        <div>
+            <h3>Terms & Cookies</h3>
+            <p style="font-size:0.9rem;">By using this site you agree to our terms. We use minimal cookies for analytics only.</p>
+        </div>
+    </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div>
+            <h5>Zephyr Garden Notes</h5>
+            <p style="color:#b8c6b8; font-size:0.85rem;">Independent gardening blog since 2021. Real dirt, real advice.</p>
+        </div>
+        <div>
+            <h5>Explore</h5>
+            <ul>
+                <li><a href="#" data-category="growing">Growing Guides</a></li>
+                <li><a href="#" data-category="soil">Soil & Compost</a></li>
+                <li><a href="#" data-category="seasonal">Seasonal</a></li>
+                <li><a href="#" data-category="essays">Essays</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5>Information</h5>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5>Connect</h5>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Pinterest</a></li>
+                <li><a href="#">RSS Feed</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 Zephyr Garden Notes. All rights reserved. Made with soil under fingernails.
+    </div>
+</footer>
+
+<!-- ARTICLE MODAL -->
+<div id="articleModal" class="article-modal">
+    <div class="modal-content">
+        <button class="close-modal" id="closeModal">&times;</button>
+        <div id="modalArticleContent"></div>
+    </div>
+</div>
+
+<script>
+    // FULL ARTICLE DATABASE (long-form content, original, niche-specific)
+    const articles = {
+        'soil-food-web': {
+            title: 'The Living Soil: Understanding the Food Web Beneath Your Feet',
+            category: 'Soil',
+            author: 'Elara Wren',
+            date: 'March 12, 2025',
+            readingTime: '12 min read',
+            image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+            content: `
+                <p>When most people think about gardening, they think about plants. Leaves, flowers, fruit. But the real action — the messy, microscopic, nutrient-cycling miracle — happens in the dark, crumbly layer beneath our feet. Soil is not an inert medium. It is a living ecosystem, and understanding its food web is the single most important shift a gardener can make.</p>
+                <h2>The Soil Food Web, Explained Simply</h2>
+                <p>At the base of the soil food web are bacteria and fungi. They break down organic matter — dead leaves, root exudates, compost — into plant-available nutrients. In return, plants feed them sugars through their roots. It's a trade agreement billions of years old.</p>
+                <p>Next come protozoa and nematodes. They graze on bacteria and fungi, releasing excess nitrogen in a form plants can absorb. Earthworms and arthropods shred organic matter, aerate the soil, and move nutrients deeper. Every organism has a role.</p>
+                <h2>Why Tillage Hurts</h2>
+                <p>Mechanical tillage slices through fungal networks, destroys earthworm burrows, and oxidizes organic matter. A single rototilling can release decades of stored carbon into the atmosphere in minutes. No-till and low-till gardening preserve the architecture of the soil food web.</p>
+                <h2>Feeding the Soil, Not the Plant</h2>
+                <p>Instead of reaching for synthetic nitrogen, feed the organisms that will feed your plants. Compost, mulch, cover crops, and compost tea are all ways to inoculate and nourish the soil ecosystem. The result is slower but more resilient growth.</p>
+                <h2>Practical Steps for Home Gardeners</h2>
+                <p>1. Stop tilling. 2. Add 2-3 inches of compost each year. 3. Keep soil covered with mulch or cover crops. 4. Avoid synthetic fertilizers and pesticides. 5. Be patient — soil biology takes time to recover.</p>
+                <p>The garden is a mirror of the soil. When the soil is alive, the garden thrives with less intervention. That is the quiet promise of the soil food web.</p>
+            `
+        },
+        'tomato-guide': {
+            title: 'Tomatoes Without Tears: A Realistic Guide for Home Gardeners',
+            category: 'Growing',
+            author: 'Marcus Hale',
+            date: 'March 10, 2025',
+            readingTime: '8 min read',
+            image: 'https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=800&q=80',
+            content: `
+                <p>Tomatoes are the most popular home garden crop, and also the most misunderstood. Every year, gardeners make the same mistakes: inconsistent watering, overcrowding, and believing old wives' tales about pruning. Here is a straightforward guide to growing tomatoes that actually taste like something.</p>
+                <h2>Determinate vs. Indeterminate</h2>
+                <p>Determinate tomatoes grow to a fixed height and ripen all at once — great for canning. Indeterminate tomatoes keep growing and producing until frost. Choose based on your space and how you plan to use the harvest.</p>
+                <h2>Soil and Planting</h2>
+                <p>Tomatoes are heavy feeders. Amend soil with compost and a balanced organic fertilizer. Plant deep — bury two-thirds of the stem — to encourage roots along the buried stem.</p>
+                <h2>Watering: The Goldilocks Rule</h2>
+                <p>Consistent moisture prevents blossom end rot. Aim for 1-2 inches per week, delivered slowly. Drip irrigation or soaker hoses are ideal. Mulch heavily to retain moisture.</p>
+                <h2>Pruning: Less Is More</h2>
+                <p>For indeterminate varieties, removing suckers below the first flower cluster can improve airflow. But over-pruning reduces leaf area for photosynthesis. If in doubt, leave it.</p>
+                <h2>Common Problems</h2>
+                <p>Blossom end rot is a calcium uptake issue caused by inconsistent watering, not a lack of calcium in the soil. Hornworms can be hand-picked. Early blight is managed with mulch and crop rotation.</p>
+            `
+        },
+        'autumn-planting': {
+            title: 'Autumn Is for Planting: Why Fall Beats Spring for Perennials',
+            category: 'Seasonal',
+            author: 'Elara Wren',
+            date: 'March 8, 2025',
+            readingTime: '6 min read',
+            image: 'https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=800&q=80',
+            content: `
+                <p>Spring gets all the glory, but autumn is the connoisseur's planting season. Cool air, warm soil, and reliable rainfall create ideal conditions for roots to establish before winter. Here's why fall planting should be on your calendar.</p>
+                <h2>Root Growth Happens in Cool Weather</h2>
+                <p>While top growth slows in autumn, soil temperatures remain warm enough for roots to grow vigorously. Plants put energy into underground establishment rather than leaves and flowers.</p>
+                <h2>Less Stress, Less Watering</h2>
+                <p>Transplant shock is reduced in cool, humid weather. You'll water less, and natural rainfall often does the job for you.</p>
+                <h2>What to Plant in Fall</h2>
+                <p>Perennials, shrubs, trees, garlic, tulip bulbs, and cool-season vegetables like spinach and kale. Avoid tropicals and tender annuals.</p>
+                <h2>Timing</h2>
+                <p>Plant at least 4-6 weeks before the first hard frost. In colder zones, earlier is better. Mulch after planting to moderate soil temperature.</p>
+            `
+        },
+        'slow-gardening': {
+            title: 'The Case for Slow Gardening: Doing Less, Observing More',
+            category: 'Essays',
+            author: 'Marcus Hale',
+            date: 'March 5, 2025',
+            readingTime: '5 min read',
+            image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80',
+            content: `
+                <p>We live in a culture obsessed with speed and productivity. But the garden does not respond to deadlines. It responds to observation, patience, and a willingness to sit still. Slow gardening is not a technique — it's a mindset.</p>
+                <h2>The Problem with Hustle Gardening</h2>
+                <p>Hustle gardening is about quick fixes: chemical fertilizers, pesticides, and constant intervention. It treats the garden as a machine. But gardens are complex living systems, and machines break.</p>
+                <h2>Observation as a Skill</h2>
+                <p>Spend ten minutes a day just looking. Notice which plants are thriving, where water pools, which insects are present. You'll learn more from observation than from any book.</p>
+                <h2>The Long Game</h2>
+                <p>A garden built slowly — with compost, mulch, and patience — becomes more resilient each year. The soil improves. Pests find balance. Weeds become manageable.</p>
+                <p>Slow gardening is an act of resistance against a culture of hurry. And it produces better tomatoes, too.</p>
+            `
+        },
+        'composting-guide': {
+            title: 'Composting That Actually Works: A No-Nonsense Method',
+            category: 'Soil',
+            author: 'Elara Wren',
+            date: 'March 1, 2025',
+            readingTime: '10 min read',
+            image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80',
+            content: `
+                <p>Composting has a reputation for being complicated or smelly. It isn't. The basics are simple: balance carbon and nitrogen, keep it as moist as a wrung-out sponge, and turn it occasionally. Here's how to do it right.</p>
+                <h2>The C:N Ratio</h2>
+                <p>Ideally, aim for 25-30 parts carbon to 1 part nitrogen. Browns (leaves, cardboard, straw) are carbon. Greens (grass clippings, kitchen scraps, coffee grounds) are nitrogen. If your pile smells, add more browns.</p>
+                <h2>What to Compost</h2>
+                <p>Fruit and vegetable scraps, coffee grounds, tea leaves, eggshells, grass clippings, leaves, cardboard, and paper. Avoid meat, dairy, oils, and pet waste.</p>
+                <h2>Troubleshooting</h2>
+                <p>Smelly pile? Add browns and turn. Not heating up? Add greens and moisture. Too dry? Water it. Too wet? Add browns and turn.</p>
+                <h2>When Is It Done?</h2>
+                <p>Finished compost is dark, crumbly, and smells earthy. It should not resemble the original ingredients. Sift out any large chunks and add them back to the pile.</p>
+            `
+        },
+        'container-gardening': {
+            title: 'Container Gardening: Big Harvests from Small Spaces',
+            category: 'Growing',
+            author: 'Priya Nair',
+            date: 'February 27, 2025',
+            readingTime: '9 min read',
+            image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80',
+            content: `
+                <p>No garden bed? No problem. Containers can produce an astonishing amount of food on a balcony, patio, or windowsill. The key is choosing the right varieties and giving them the care they need.</p>
+                <h2>Choosing Containers</h2>
+                <p>Bigger is almost always better. A 12-inch pot is the minimum for most herbs and greens. Tomatoes and peppers need at least 5 gallons. Ensure drainage holes.</p>
+                <h2>Soil Mix</h2>
+                <p>Use a quality potting mix, not garden soil. Garden soil compacts in containers and doesn't drain well. Add compost for nutrients.</p>
+                <h2>Best Crops for Containers</h2>
+                <p>Cherry tomatoes, bush beans, lettuce, spinach, radishes, peppers, herbs, and even dwarf varieties of squash and eggplant.</p>
+                <h2>Watering and Feeding</h2>
+                <p>Containers dry out fast. Check daily in hot weather. Use a water-soluble organic fertilizer every 2-3 weeks during the growing season.</p>
+            `
+        }
+    };
+
+    // DOM elements
+    const articleContainer = document.getElementById('articleContainer');
+    const searchInput = document.getElementById('searchInput');
+    const modal = document.getElementById('articleModal');
+    const closeModal = document.getElementById('closeModal');
+    const modalArticleContent = document.getElementById('modalArticleContent');
+    const newsletterForm = document.getElementById('newsletterForm');
+
+    // Category filter handling
+    let currentCategory = 'all';
+    let currentSearch = '';
+
+    function renderArticles() {
+        // For simplicity, we only show the static articles already in HTML.
+        // We'll implement filtering by hiding/showing cards.
+        const allCards = document.querySelectorAll('.article-card, .featured-article');
+        allCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            const title = card.querySelector('h2, h3').innerText.toLowerCase();
+            const excerpt = card.querySelector('.excerpt').innerText.toLowerCase();
+            const matchesCategory = (currentCategory === 'all' || category === currentCategory);
+            const matchesSearch = title.includes(currentSearch) || excerpt.includes(currentSearch);
+            if (matchesCategory && matchesSearch) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // Category navigation
+    document.querySelectorAll('[data-category]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const cat = this.getAttribute('data-category');
+            currentCategory = cat === 'all' ? 'all' : cat;
+            // update active state if needed (optional)
+            renderArticles();
+        });
+    });
+
+    // Search
+    searchInput.addEventListener('input', function() {
+        currentSearch = this.value.toLowerCase().trim();
+        renderArticles();
+    });
+
+    // Article link -> open modal
+    document.querySelectorAll('.article-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const articleId = this.getAttribute('data-article');
+            if (articles[articleId]) {
+                const art = articles[articleId];
+                modalArticleContent.innerHTML = `
+                    <h1>${art.title}</h1>
+                    <div class="meta">By ${art.author} · ${art.date} · ${art.readingTime}</div>
+                    <img class="article-image" src="${art.image}" alt="${art.title}">
+                    ${art.content}
+                `;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Close modal
+    closeModal.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    });
+    window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Newsletter form
+    newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for subscribing to Zephyr Garden Notes. Check your inbox for a confirmation email.');
+        newsletterForm.reset();
+    });
+
+    // Initial render
+    renderArticles();
+</script>
+</body>
+</html>

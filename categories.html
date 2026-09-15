@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories – Zephyr Garden Notes</title>
+    <meta name="description" content="Browse all gardening categories on Zephyr Garden Notes – from growing guides and soil to seasonal advice and essays.">
+    <link rel="canonical" href="https://www.zephyrgardennotes.com/categories.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Categories – Zephyr Garden Notes">
+    <meta property="og:description" content="Explore gardening topics: growing guides, soil, seasonal, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.zephyrgardennotes.com/categories.html">
+    <meta property="og:image" content="https://www.zephyrgardennotes.com/og-image.jpg">
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Categories",
+      "description": "Browse all gardening categories on Zephyr Garden Notes.",
+      "url": "https://www.zephyrgardennotes.com/categories.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Zephyr Garden Notes",
+        "url": "https://www.zephyrgardennotes.com"
+      }
+    }
+    </script>
+    <style>
+        /* RESET & BASE (same as homepage/terms for consistency) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', Georgia, 'Times New Roman', serif;
+            background-color: #fcfaf7;
+            color: #1e2b1c;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 600;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            color: #1b2e1b;
+        }
+
+        h1 { font-size: 2.6rem; margin-bottom: 0.6rem; }
+        h2 { font-size: 1.9rem; margin: 2rem 0 1rem; border-bottom: 1px solid #d9d6cf; padding-bottom: 0.4rem; }
+        h3 { font-size: 1.4rem; margin: 1.5rem 0 0.5rem; }
+        h4 { font-size: 1.2rem; margin: 1.2rem 0 0.4rem; }
+        p { margin-bottom: 1.2rem; font-size: 1.08rem; }
+        ul, ol { margin: 0 0 1.2rem 1.8rem; }
+        li { margin-bottom: 0.5rem; font-size: 1.05rem; }
+
+        a {
+            color: #2b5e2b;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        a:hover {
+            color: #0f3f0f;
+            text-decoration: underline;
+        }
+
+        /* HEADER (same as homepage/terms) */
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e2dfd9;
+            padding: 1.2rem 0;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            line-height: 1;
+            filter: grayscale(30%);
+        }
+
+        .logo-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.02em;
+            color: #1b3a1b;
+        }
+
+        .logo-text span {
+            font-weight: 300;
+            color: #5d6b5d;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.8rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .main-nav a {
+            color: #2d3a2d;
+            text-decoration: none;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid transparent;
+        }
+
+        .main-nav a:hover {
+            border-bottom-color: #9cb89c;
+            text-decoration: none;
+        }
+
+        .search-area {
+            margin-left: auto;
+            padding-left: 2rem;
+        }
+
+        .search-area input {
+            padding: 0.5rem 0.8rem;
+            border: 1px solid #d0cdc6;
+            border-radius: 30px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            background: #fcfaf7;
+            width: 180px;
+            transition: width 0.2s;
+        }
+
+        .search-area input:focus {
+            outline: none;
+            border-color: #8aa88a;
+            width: 220px;
+        }
+
+        /* LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* CATEGORIES PAGE SPECIFIC */
+        .categories-hero {
+            text-align: center;
+            padding: 3rem 1.5rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .categories-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .categories-hero p {
+            font-size: 1.2rem;
+            color: #4d5e4d;
+            font-style: italic;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0 4rem;
+        }
+
+        .category-card {
+            background: #ffffff;
+            border: 1px solid #e6e3dc;
+            border-radius: 12px;
+            padding: 2rem 1.8rem 1.8rem;
+            transition: transform 0.15s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(30, 43, 28, 0.08);
+            border-color: #cbd6cb;
+        }
+
+        .category-icon {
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
+            line-height: 1;
+        }
+
+        .category-card h3 {
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem;
+            color: #1b2e1b;
+            font-weight: 600;
+        }
+
+        .category-card p {
+            font-size: 0.98rem;
+            color: #3f4e3f;
+            margin-bottom: 1.2rem;
+            flex: 1;
+        }
+
+        .category-meta {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #6b7a6b;
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+        }
+
+        .category-link {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #2b5e2b;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 0.3rem;
+            transition: gap 0.2s;
+        }
+
+        .category-link:hover {
+            gap: 0.6rem;
+            text-decoration: none;
+            color: #0f3f0f;
+        }
+
+        .category-link span {
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+
+        .all-topics-note {
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #5f6b5f;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        /* FOOTER (same as homepage/terms) */
+        .site-footer {
+            background: #1e2b1c;
+            color: #d0d9d0;
+            padding: 3rem 0 1.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .footer-grid h5 {
+            color: #ffffff;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-grid li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-grid a {
+            color: #b8c6b8;
+            text-decoration: none;
+        }
+
+        .footer-grid a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2.5rem auto 0;
+            padding: 1.5rem 1.5rem 0;
+            border-top: 1px solid #2f402f;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8b9a8b;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1000px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .search-area {
+                margin-left: 0;
+                padding-left: 0;
+                width: 100%;
+            }
+            .search-area input {
+                width: 100%;
+            }
+            .main-nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .categories-hero h1 {
+                font-size: 2.4rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .categories-hero h1 { font-size: 2.1rem; }
+            .categories-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .category-card {
+                padding: 1.8rem 1.5rem;
+            }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- SITE HEADER (same as homepage) -->
+<header class="site-header">
+    <div class="header-inner">
+        <div class="logo">
+            <div class="logo-icon">🌿</div>
+            <div class="logo-text">Zephyr <span>Garden Notes</span></div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terms.html">Terms Of Privacy</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="cookies.html">Cookies Policy</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+                <li><a href="categories.html">Categories</a></li>
+            </ul>
+        </nav>
+        <div class="search-area">
+            <input type="text" id="searchInput" placeholder="Search articles...">
+        </div>
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <!-- HERO -->
+    <div class="categories-hero">
+        <h1>Categories</h1>
+        <p>Dig into the topics that make your garden grow.</p>
+    </div>
+
+    <!-- CATEGORIES GRID -->
+    <div class="categories-grid">
+        <!-- Growing Guides -->
+        <div class="category-card">
+            <div class="category-icon">🌱</div>
+            <h3>Growing Guides</h3>
+            <div class="category-meta">42 articles</div>
+            <p>From seed to harvest — detailed, practical guides for vegetables, herbs, flowers, and more. No fluff, just what works.</p>
+            <a href="#" class="category-link">Browse guides <span>→</span></a>
+        </div>
+
+        <!-- Soil & Compost -->
+        <div class="category-card">
+            <div class="category-icon">🪱</div>
+            <h3>Soil & Compost</h3>
+            <div class="category-meta">28 articles</div>
+            <p>Everything beneath the surface: building healthy soil, composting, mulching, and feeding the earth that feeds you.</p>
+            <a href="#" class="category-link">Explore soil <span>→</span></a>
+        </div>
+
+        <!-- Seasonal -->
+        <div class="category-card">
+            <div class="category-icon">🍂</div>
+            <h3>Seasonal</h3>
+            <div class="category-meta">35 articles</div>
+            <p>What to plant, prune, and prepare month by month. Timely advice for every zone and every season.</p>
+            <a href="#" class="category-link">See seasonal tips <span>→</span></a>
+        </div>
+
+        <!-- Essays -->
+        <div class="category-card">
+            <div class="category-icon">📝</div>
+            <h3>Essays</h3>
+            <div class="category-meta">19 articles</div>
+            <p>Slow gardening, observation, and the quiet lessons of the natural world. Thoughts from the garden bench.</p>
+            <a href="#" class="category-link">Read essays <span>→</span></a>
+        </div>
+
+        <!-- Tools & Techniques -->
+        <div class="category-card">
+            <div class="category-icon">🧰</div>
+            <h3>Tools & Techniques</h3>
+            <div class="category-meta">24 articles</div>
+            <p>Honest reviews, time-tested methods, and DIY projects that make gardening easier and more enjoyable.</p>
+            <a href="#" class="category-link">View tools <span>→</span></a>
+        </div>
+
+        <!-- Pests & Problems -->
+        <div class="category-card">
+            <div class="category-icon">🐛</div>
+            <h3>Pests & Problems</h3>
+            <div class="category-meta">31 articles</div>
+            <p>Identify and solve common garden challenges — from aphids to blossom end rot — with organic, practical solutions.</p>
+            <a href="#" class="category-link">Solve problems <span>→</span></a>
+        </div>
+
+        <!-- Container Gardening -->
+        <div class="category-card">
+            <div class="category-icon">🪴</div>
+            <h3>Container Gardening</h3>
+            <div class="category-meta">17 articles</div>
+            <p>Small-space solutions for patios, balconies, and windowsills. Grow food and beauty anywhere.</p>
+            <a href="#" class="category-link">Grow in containers <span>→</span></a>
+        </div>
+
+        <!-- Seed Saving -->
+        <div class="category-card">
+            <div class="category-icon">🌾</div>
+            <h3>Seed Saving</h3>
+            <div class="category-meta">12 articles</div>
+            <p>Learn to save, store, and share seeds from your best plants. A skill that connects seasons and communities.</p>
+            <a href="#" class="category-link">Save seeds <span>→</span></a>
+        </div>
+
+        <!-- Garden Design -->
+        <div class="category-card">
+            <div class="category-icon">📐</div>
+            <h3>Garden Design</h3>
+            <div class="category-meta">15 articles</div>
+            <p>Layouts, companion planting, and aesthetic choices that make your garden both productive and beautiful.</p>
+            <a href="#" class="category-link">Design your space <span>→</span></a>
+        </div>
+    </div>
+
+    <!-- NOTE -->
+    <div class="all-topics-note">
+        <p>Can't find what you're looking for? <a href="contact.html">Let us know</a> — we're always adding new topics.</p>
+    </div>
+</div>
+
+<!-- FOOTER (same as homepage) -->
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div>
+            <h5>Zephyr Garden Notes</h5>
+            <p style="color:#b8c6b8; font-size:0.85rem;">Independent gardening blog since 2021. Real dirt, real advice.</p>
+        </div>
+        <div>
+            <h5>Explore</h5>
+            <ul>
+                <li><a href="#">Growing Guides</a></li>
+                <li><a href="#">Soil & Compost</a></li>
+                <li><a href="#">Seasonal</a></li>
+                <li><a href="#">Essays</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5>Information</h5>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Use</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5>Connect</h5>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Pinterest</a></li>
+                <li><a href="#">RSS Feed</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 Zephyr Garden Notes. All rights reserved. Made with soil under fingernails.
+    </div>
+</footer>
+
+<script>
+    // Simple search placeholder handler (same as terms page)
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                alert('Search is available on the homepage. Redirecting you there...');
+                window.location.href = 'index.html';
+            }
+        });
+    }
+</script>
+</body>
+</html>
